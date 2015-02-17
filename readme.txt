@@ -1,7 +1,7 @@
-Highlight the first patient's information on the LabCorp pdf bill.
-Holding Shift+Ctrl hold the Page Down button until you reach the bottom of the pdf file.
-Adjust so that all of the final patient's information is highlighted.
-Copy the text.
-Paste the text in invtext.csv.
-Sort to remove empty spaces and number the rows of text in invtext.csv.
-Run pdscsvcleaner which will output cleanedinvtxt.csv.
+1. Download the LabCorp invoice pdf file from the LabCorp website.
+2. Copy and paste the charges from the LabCorp invoice pdf into invtext.csv.
+3. Number each row in invtext.csv.
+4. Close the file and run cleanpdfhiv.py or cleanpdfstd.py, depending on the invoice that you’re getting the charges from.
+5. Next, run the file pdfcsvparser.py to pull the charges from cleanedinvtxt.csv.
+6. Create a pivot table using the data in patientcharges.csv which you can find in the output folder.
+
