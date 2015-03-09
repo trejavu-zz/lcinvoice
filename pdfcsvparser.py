@@ -97,17 +97,24 @@ k=0
 #i, j, and k exist to check that no rows were not looked at i+j should equal k
 for key, value in txtid.items():
     try:
-        found=re.search('[0-9]{1,3}\.[0-9]{2}', value).group(0)
+        found=re.search('[0-9]{1,3}\.[0-9]{2}CR', value).group(0)
         indexval=key
-        charge[key]=found
-##        print(indexval, found)
+        charge[key]="-"+found[:len(found)-2]
         j+=1
         k+=1
     except AttributeError:
+        try:
+            found=re.search('[0-9]{1,3}\.[0-9]{2}', value).group(0)
+            indexval=key
+            charge[key]=found
+##        print(indexval, found)
+            j+=1
+            k+=1
+        except AttributeError:
 ##        print('did not find', value)
-        i+=1
-        k+=1
-        found=''
+            i+=1
+            k+=1
+            found=''
 print('i is %d'%i)
 print('j is %d'%j)
 print('k is %d'%k)
