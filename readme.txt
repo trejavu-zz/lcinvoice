@@ -4,4 +4,4 @@
 4. Close the file and run cleanpdfhiv.py or cleanpdfstd.py, depending on the invoice that you’re getting the charges from.
 5. Next, run the file pdfcsvparser.py to pull the charges from cleanedinvtxt.csv.
 6. Create a pivot table using the data in patientcharges.csv which you can find in the output folder.
-
+7. This is line 7.
